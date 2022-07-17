@@ -1,4 +1,4 @@
-const { getUpcomingMatches } = require("../utils/getUpcomingMatches")
+const getUpcomingMatches = require("../utils/getUpcomingMatches")
 
 exports.handler = async function () {
     try {
