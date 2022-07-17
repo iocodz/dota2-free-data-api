@@ -1,1 +1,5 @@
-export const LIQUIPEDIA_UPCOMING_URL = 'https://liquipedia.net/dota2/Liquipedia:Upcoming_and_ongoing_matches'
+var config = {};
+
+config.upcoming_url = 'https://liquipedia.net/dota2/Liquipedia:Upcoming_and_ongoing_matches';
+
+module.exports = config;
