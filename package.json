@@ -1,0 +1,14 @@
+{
+  "name": "dota-pro-upcoming-matches-api",
+  "version": "1.0.0",
+  "description": "Dota2 upcoming and ongoing pro matches.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raulcr98",
+  "license": "ISC",
+  "dependencies": {
+    "scrape-it": "^5.3.2"
+  }
+}

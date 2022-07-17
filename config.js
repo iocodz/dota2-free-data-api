@@ -1,0 +1,1 @@
+export const LIQUIPEDIA_UPCOMING_URL = 'https://liquipedia.net/dota2/Liquipedia:Upcoming_and_ongoing_matches'
