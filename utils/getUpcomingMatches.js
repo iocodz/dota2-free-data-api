@@ -1,7 +1,7 @@
 const scrapeIt = require('scrape-it')
 const config = require('../config')
 
-export async function getUpcomingMatches() {
+module.exports =  async function getUpcomingMatches() {
     const scrapeResult = await scrapeIt(config.upcoming_url, {
         matches: {
             listItem: '.infobox_matches_content',
