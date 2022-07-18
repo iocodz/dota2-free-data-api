@@ -8,6 +8,18 @@ module.exports =  async function getUpcomingMatches() {
             data: {
                 first: '.team-left span.team-template-text',
                 second: '.team-right span.team-template-text',
+                firstImage: {
+                    selector: '.team-left span.team-template-image-icon a img',
+                    attr: 'src'
+                },
+                secondImage: {
+                    selector: '.team-right span.team-template-image-icon a img',
+                    attr: 'src'
+                },
+                timeLeft: {
+                    selector: '.match-countdown span.timer-object',
+                    attr: 'data-timestamp'
+                },
                 tournamentName: '.match-filler div div a',
                 tournamentLink: {
                     selector: '.match-filler div div a',
