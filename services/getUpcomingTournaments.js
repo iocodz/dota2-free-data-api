@@ -13,7 +13,7 @@ module.exports = async function getUpcomingMatches() {
         },
         tier: 'div.divCell.Tier a',
         name: 'div.divCell.Tournament b a',
-        tournamentLogo: {
+        image: {
           selector: 'div.divCell.Tournament a img',
           attr: 'src'
         },

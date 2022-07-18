@@ -12,7 +12,7 @@ module.exports = async function getTeams() {
           convert: x => x.split('/')[2]
         },
         name: '.team-template-team-standard .team-template-text a',
-        logo: {
+        image: {
           selector: '.team-template-image-icon a img',
           attr: 'src'
         }

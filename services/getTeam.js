@@ -82,7 +82,7 @@ module.exports = async function getTeam(id) {
       }
     }
   });
-
+  scrapeResult.data.teams[0].id = id
   scrapeResult.data.teams[0].activeRoster = scrapeResult.data.teams[0].activeRoster.slice(0, 5)
   scrapeResult.data.teams[0].archivements = scrapeResult.data.teams[0].archivements.slice(1, -1)
 
