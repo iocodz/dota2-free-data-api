@@ -6,6 +6,11 @@ module.exports =  async function getUpcomingMatches() {
         tournaments: {
             listItem: '.divRow',
             data: {
+                id: {
+                    selector: '.divCell.Tournament b a',
+                    attr: 'href',
+                    convert: x => x.split('/dota2/')[1]
+                },
                 tier: 'div.divCell.Tier a',
                 name: 'div.divCell.Tournament b a',
                 tournamentLogo: {
