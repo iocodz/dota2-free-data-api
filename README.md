@@ -28,7 +28,7 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 
 ### TeamType
 
-`TeamType` define una categoría bajo la cual se agrupan los equipos.
+`TeamType` define un equipos.
 
 | Campo | Tipo de dato | Descripción |
 | :--- | :--- | :--- |
