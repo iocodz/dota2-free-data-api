@@ -16,7 +16,7 @@ module.exports =  async function getUpcomingMatches() {
                     selector: '.team-right span.team-template-image-icon a img',
                     attr: 'src'
                 },
-                timeLeft: {
+                startDate: {
                     selector: '.match-countdown span.timer-object',
                     attr: 'data-timestamp'
                 },
