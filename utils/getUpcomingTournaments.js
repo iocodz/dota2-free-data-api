@@ -3,7 +3,7 @@ const config = require('../config')
 
 module.exports =  async function getUpcomingMatches() {
     const scrapeResult = await scrapeIt(config.upcomingTournamentsUrl, {
-        matches: {
+        tournaments: {
             listItem: '.divRow',
             data: {
                 tier: 'div.divCell.Tier a',
