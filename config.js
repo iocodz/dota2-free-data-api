@@ -4,6 +4,7 @@ config.baseUrl = 'https://liquipedia.net/dota2';
 config.upcomingMatchesUrl = config.baseUrl + '/Liquipedia:Upcoming_and_ongoing_matches';
 config.upcomingTournamentsUrl = config.baseUrl + '/Portal:Tournaments';
 config.teamsUrl = config.baseUrl + '/Portal:Teams';
+config.teamUrl = config.baseUrl;
 
 config.headers = {
     'Access-Control-Allow-Origin': '*',
