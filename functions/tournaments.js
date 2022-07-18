@@ -1,5 +1,5 @@
 const config = require("../config")
-const getUpcomingTournaments = require("../utils/getUpcomingTournaments")
+const getUpcomingTournaments = require("../services/getUpcomingTournaments")
 
 exports.handler = async function () {
     try {

@@ -1,5 +1,5 @@
 const config = require("../config")
-const getUpcomingMatches = require("../utils/getUpcomingMatches")
+const getUpcomingMatches = require("../services/getUpcomingMatches")
 
 exports.handler = async function () {
     try {
