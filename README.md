@@ -15,6 +15,30 @@ La API se expone en el siguiente URL: [https://dota-pro.netlify.app/api](https:/
 
 Los objetos que maneja la API están definidos en los siguientes tipos:
 
+### HeroType
+
+`HeroType` define un héroe.
+
+| Campo | Tipo de dato | Descripción |
+| :--- | :--- | :--- |
+| `id` | `Number` | Identificador del héroe |
+| `localized_name` | `String` | Nombre del héroe |
+| `url_full_portrait` | `String` | Imagen del héroe HD |
+| `url_large_portrait` | `String` | Imagen del héroe MD |
+| `url_small_portrait` | `String` | Imagen del héroe LD |
+| `url_vertical_portrait` | `String` | Imagen del héroe vertical |
+
+### ItemType
+
+`ItemType` define un ítem.
+
+| Campo | Tipo de dato | Descripción |
+| :--- | :--- | :--- |
+| `id` | `Number` | Identificador del ítem |
+| `localized_name` | `String` | Nombre del ítem |
+| `url_image` | `String` | Imagen del ítem |
+| `cost` | `Number` | Costo del ítem |
+
 ### PlayerType
 
 `PlayerType` define un jugador.
@@ -70,6 +94,62 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 ## Consultas
 
 La API permite realizar diferentes consultas que por el momento son públicas. En el futuro requeriremos una llave API para consumir los diferentes endpoints.
+
+### Heroes
+
+El endpoint `heroes` permite consumir los héroes. El endpoint devuelve un `[HeroType]` codificado en formato JSON.
+
+#### Query
+
+```js
+let response = await fetch(`${BASE_API_URL}/heroes`)
+```
+
+#### Response
+
+```json
+{
+  "data": {
+    "heroes": [
+      {
+        "id": 1,
+        "localized_name": "Anti-Mage",
+        "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_full.png",
+        "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_sb.png",
+        "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_lg.png",
+        "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_vert.jpg"
+      }
+    ]
+  }
+}
+```
+
+### Ítems
+
+El endpoint `items` permite consumir los ítems del juego. El endpoint devuelve un `[ItemType]` codificado en formato JSON.
+
+#### Query
+
+```js
+let response = await fetch(`${BASE_API_URL}/items`)
+```
+
+#### Response
+
+```json
+{
+  "data": {
+    "items": [
+      {
+        "id": 1
+        "localized_name": "Blink Dagger",
+        "cost": 2250,
+        "url_image": "http://cdn.dota2.com/apps/dota2/images/items/blink_lg.png",
+      }
+    ]
+  }
+}
+```
 
 ### Matches
 
