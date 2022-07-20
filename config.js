@@ -6,6 +6,7 @@ config.upcomingTournamentsUrl = config.baseUrl + '/Portal:Tournaments';
 config.teamsUrl = config.baseUrl + '/Portal:Teams';
 config.teamUrl = config.baseUrl;
 config.heroesURL = config.baseUrl + '/Portal:Heroes';
+config.itemsURL = config.baseUrl + '/Portal:Items';
 
 config.headers = {
     'Access-Control-Allow-Origin': '*',

@@ -14,6 +14,10 @@ module.exports = async function getTeams() {
         name: {
           selector: 'span a',
           attr: 'title'
+        },
+        image: {
+          selector: 'a img',
+          attr: 'src'
         }
       }
     }

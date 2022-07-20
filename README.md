@@ -21,12 +21,9 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 
 | Campo | Tipo de dato | Descripción |
 | :--- | :--- | :--- |
-| `id` | `Number` | Identificador del héroe |
-| `localized_name` | `String` | Nombre del héroe |
-| `url_full_portrait` | `String` | Imagen del héroe HD |
-| `url_large_portrait` | `String` | Imagen del héroe MD |
-| `url_small_portrait` | `String` | Imagen del héroe LD |
-| `url_vertical_portrait` | `String` | Imagen del héroe vertical |
+| `id` | `String` | Identificador del héroe |
+| `name` | `String` | Nombre del héroe |
+| `image` | `String` | Imagen del héroe HD |
 
 ### ItemType
 
@@ -34,10 +31,10 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 
 | Campo | Tipo de dato | Descripción |
 | :--- | :--- | :--- |
-| `id` | `Number` | Identificador del ítem |
-| `localized_name` | `String` | Nombre del ítem |
-| `url_image` | `String` | Imagen del ítem |
-| `cost` | `Number` | Costo del ítem |
+| `id` | `String` | Identificador del ítem |
+| `name` | `String` | Nombre del ítem |
+| `image` | `String` | Imagen del ítem |
+| `price` | `Number` | Costo del ítem |
 
 ### PlayerType
 
@@ -112,12 +109,9 @@ let response = await fetch(`${BASE_API_URL}/heroes`)
   "data": {
     "heroes": [
       {
-        "id": 1,
-        "localized_name": "Anti-Mage",
-        "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_full.png",
-        "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_sb.png",
-        "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_lg.png",
-        "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_vert.jpg"
+        "id": "Anti_Mage",
+        "name": "Anti-Mage",
+        "image": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_full.png",
       }
     ]
   }
@@ -141,10 +135,10 @@ let response = await fetch(`${BASE_API_URL}/items`)
   "data": {
     "items": [
       {
-        "id": 1
-        "localized_name": "Blink Dagger",
-        "cost": 2250,
-        "url_image": "http://cdn.dota2.com/apps/dota2/images/items/blink_lg.png",
+        "id": 'Blink_Dagger',
+        "name": "Blink Dagger",
+        "price": 2250,
+        "image": "http://cdn.dota2.com/apps/dota2/images/items/blink_lg.png"
       }
     ]
   }
@@ -244,34 +238,7 @@ let response = await fetch(`${BASE_API_URL}/teams?id=OG`)
             "position":"Position:Â 1",
             "joinDate":"2021-11-21[37]"
           },
-          {
-            "id":"Bzm",
-            "name":"(Bozhidar Bogdanov)",
-            "country":"Bulgaria",
-            "position":"Position:Â 2",
-            "joinDate":"2021-11-21[37]"
-          },
-          {
-            "id":"ATF",
-            "name":"(Ammar Al-Assaf)",
-            "country":"Jordan",
-            "position":"Position:Â 3",
-            "joinDate":"2021-11-21[37]"
-          },
-          {
-            "id":"Taiga",
-            "name":"(Tommy Le)",
-            "country":"Norway",
-            "position":"Position:Â 4",
-            "joinDate":"2021-11-21[37]"
-          },
-          {
-            "id":"Misha",
-            "name":"(Mikhail Agatov)",
-            "country":"Russia",
-            "position":"Position:Â 5",
-            "joinDate":"2021-11-21[37]"
-          }
+          ...
         ],
         "archivements":[
           {
@@ -284,96 +251,7 @@ let response = await fetch(`${BASE_API_URL}/teams?id=OG`)
             },
             "prize":"$200,000"
           },
-          {
-            "place":"GA7Â -Â 8th",
-            "date":"2021-10-15",
-            "tournament":{
-              "id":"The_International",
-              "name":"The International",
-              "logo":"/commons/images/d/d6/TheInternationalSmall.png"
-            },
-            "prize":"$1,000,500"
-          },
-          {
-            "place":"AA1st",
-            "date":"2019-08-25",
-            "tournament":{
-              "id":"The_International",
-              "name":"The International",
-              "logo":"/commons/images/d/d6/TheInternationalSmall.png"
-            },
-            "prize":"$15,620,181"
-          },
-          {
-            "place":"AA1st",
-            "date":"2018-08-25",
-            "tournament":{
-              "id":"The_International",
-              "name":"The International",
-              "logo":"/commons/images/d/d6/TheInternationalSmall.png"
-            },
-            "prize":"$11,234,158"
-          },
-          {
-            "place":"GA7Â -Â 8th",
-            "date":"2017-08-10",
-            "tournament":{
-              "id":"The_International",
-              "name":"The International",
-              "logo":"/commons/images/d/d6/TheInternationalSmall.png"
-            },
-            "prize":"$617,198"
-          },
-          {
-            "place":"AA1st",
-            "date":"2017-04-30",
-            "tournament":{
-              "id":"Dota_Major_Championships",
-              "name":"Dota Major Championships",
-              "logo":"/commons/images/b/ba/Shanghai_major_small.png"
-            },
-            "prize":"$1,000,000"
-          },
-          {
-            "place":"AA1st",
-            "date":"2016-12-10",
-            "tournament":{
-              "id":"Dota_Major_Championships",
-              "name":"Dota Major Championships",
-              "logo":"/commons/images/2/2a/Frankfurt_major_small.png"
-            },
-            "prize":"$1,000,000"
-          },
-          {
-            "place":"AA1st",
-            "date":"2016-06-19",
-            "tournament":{
-              "id":"ESL_One",
-              "name":"ESL One",
-              "logo":"/commons/images/6/6f/Esl_one_small.png"
-            },
-            "prize":"$157,273"
-          },
-          {
-            "place":"AA1st",
-            "date":"2016-06-12",
-            "tournament":{
-              "id":"Dota_Major_Championships",
-              "name":"Dota Major Championships",
-              "logo":"/commons/images/0/01/Manila_major_small.png"
-            },
-            "prize":"$1,110,000"
-          },
-          {
-            "place":"AA1st",
-            "date":"2015-11-21",
-            "tournament":{
-              "id":"Dota_Major_Championships",
-              "name":"Dota Major Championships",
-              "logo":"/commons/images/2/2a/Frankfurt_major_small.png"
-            },
-            "prize":"$1,110,000"
-          }
+          ...
         ]
       }
     ]
@@ -406,15 +284,7 @@ let response = await fetch(`${BASE_API_URL}/tournaments`)
         "prize":"$1,600,000",
         "location":"Singapore"
       },
-      {
-        "id":"ESL_One/Malaysia/2022",
-        "tier":"Tier 1",
-        "name":"ESL One Malaysia 2022",
-        "image":"/commons/images/8/8a/ESL_One_2019_new_icon.png",
-        "date":"Aug 23 - 28, 2022",
-        "prize":"$400,000",
-        "location":"Genting Highlands, Malaysia"
-      }
+      ...
     ]
   }
 }
