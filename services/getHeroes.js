@@ -1,5 +1,22 @@
-const heroes = require('../data/heroes.json')
+const scrapeIt = require('scrape-it')
+const config = require('../config')
 
-module.exports = async function getHeroes() {
-    return heroes
+module.exports = async function getTeams() {
+  const scrapeResult = await scrapeIt(config.heroesURL, {
+    heroes: {
+      listItem: 'ul.halfbox li',
+      data: {
+        id: {
+          selector: 'span a',
+          attr: 'href',
+          convert: x => x.split('/')[2]
+        },
+        name: {
+          selector: 'span a',
+          attr: 'title'
+        }
+      }
+    }
+  })
+  return scrapeResult.data
 }

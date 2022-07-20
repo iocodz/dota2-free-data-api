@@ -5,6 +5,7 @@ config.upcomingMatchesUrl = config.baseUrl + '/Liquipedia:Upcoming_and_ongoing_m
 config.upcomingTournamentsUrl = config.baseUrl + '/Portal:Tournaments';
 config.teamsUrl = config.baseUrl + '/Portal:Teams';
 config.teamUrl = config.baseUrl;
+config.heroesURL = config.baseUrl + '/Portal:Heroes';
 
 config.headers = {
     'Access-Control-Allow-Origin': '*',
