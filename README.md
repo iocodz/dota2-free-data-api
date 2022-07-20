@@ -135,7 +135,7 @@ let response = await fetch(`${BASE_API_URL}/items`)
   "data": {
     "items": [
       {
-        "id": 'Blink_Dagger',
+        "id": "Blink_Dagger",
         "name": "Blink Dagger",
         "price": 2250,
         "image": "http://cdn.dota2.com/apps/dota2/images/items/blink_lg.png"
@@ -237,8 +237,7 @@ let response = await fetch(`${BASE_API_URL}/teams?id=OG`)
             "country":"Ukraine",
             "position":"Position:Â 1",
             "joinDate":"2021-11-21[37]"
-          },
-          ...
+          }
         ],
         "archivements":[
           {
@@ -250,8 +249,7 @@ let response = await fetch(`${BASE_API_URL}/teams?id=OG`)
               "logo":"/commons/images/8/8a/ESL_One_2019_new_icon.png"
             },
             "prize":"$200,000"
-          },
-          ...
+          }
         ]
       }
     ]
@@ -283,8 +281,7 @@ let response = await fetch(`${BASE_API_URL}/tournaments`)
         "date":"Oct 15 - 30, 2022",
         "prize":"$1,600,000",
         "location":"Singapore"
-      },
-      ...
+      }
     ]
   }
 }
