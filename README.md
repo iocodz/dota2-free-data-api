@@ -11,6 +11,15 @@ description: >-
 
 La API se expone en el siguiente URL: [https://dota-pro.netlify.app/api](https://dota-pro.netlify.app/api)
 
+### Usando esta API podrás obtener:
+
+* Listado de póximos torneos.
+* Listado de próximos partidos.
+* Listado de equipos profesionales.
+* Equipo con su roster actual, mayores logros, ganancias estimadas.
+* Listado actualizado de héroes.
+* Listado actualizado de ítems.
+
 ## Tipos
 
 Los objetos que maneja la API están definidos en los siguientes tipos:
