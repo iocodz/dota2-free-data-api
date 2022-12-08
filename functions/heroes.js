@@ -1,9 +1,11 @@
-const config = require("../config")
+const config = require("../config");
+const filters = require("../helpers/filter");
 const getHeroes = require("../services/getHeroes")
 
-exports.handler = async function () {
+exports.handler = async function (event) {
   try {
-    const data = await getHeroes()
+    const { heroes } = await getHeroes();
+    const data = filters(heroes, event);
     return {
       statusCode: 200,
       headers: config.headers,

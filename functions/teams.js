@@ -1,11 +1,11 @@
 const config = require("../config");
-const getTeam = require("../services/getTeam");
+const filters = require("../helpers/filter");
 const getTeams = require("../services/getTeams")
 
-exports.handler = async event => {
-  const { id } = event.queryStringParameters;
+exports.handler = async function (event) {
   try {
-    const data = id ? await getTeam(id) : await getTeams()
+    const { teams } = await getTeams();
+    const data = filters(teams, event);
     return {
       statusCode: 200,
       headers: config.headers,

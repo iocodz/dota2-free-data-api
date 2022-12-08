@@ -1,9 +1,11 @@
 const config = require("../config")
+const filters = require("../helpers/filter");
 const getItems = require("../services/getItems")
 
-exports.handler = async function () {
+exports.handler = async function (event) {
   try {
-    const data = await getItems()
+    const { items } = await getItems();
+    const data = filters(items, event);
     return {
       statusCode: 200,
       headers: config.headers,
