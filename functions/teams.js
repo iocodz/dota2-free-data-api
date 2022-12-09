@@ -10,7 +10,8 @@ exports.handler = async function (event) {
       statusCode: 200,
       headers: config.headers,
       body: JSON.stringify({
-        data
+        data,
+        count: data.length
       })
     }
   } catch (e) {
